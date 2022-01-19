@@ -3,7 +3,9 @@ import Hello from './sayHallo';
 import Tweet from './Tweet';
 import Toggle from './Toggle.js';
 import Toggle2 from './Toggle2.js';
-import Inputs from './Inputs.js'
+import Inputs from './Inputs.js';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function App (){
 
@@ -24,7 +26,7 @@ function App (){
       <Tweet name="Ola" message="Something else more" tweetno="34"/>
       <Tweet name="Kuba" message="Something else more and more" tweetno="90"/>*/}
       <h1 className={isRed ? 'red' : ''}>Change my color</h1>
-      <button onClick={increment}>Increment</button>
+      <Button onClick={increment}>Increment</Button>
       <h1>{count}</h1>
 
       <Toggle />
@@ -32,6 +34,20 @@ function App (){
       <Toggle2 />
 
       <Inputs />
+
+      <TextField
+          label="Size"
+          id="standard-size-normal"
+          defaultValue="Normal"
+          variant="standard"
+        />
+      <TextField
+          label="Size"
+          id="filled-size-normal"
+          defaultValue="Normal"
+          variant="filled"
+        />
+        
 
     </div>
   );

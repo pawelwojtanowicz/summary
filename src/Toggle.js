@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
 
 function Toggle(){
     const [text, setText] = useState(true)
@@ -7,7 +8,7 @@ function Toggle(){
     } 
     return (
         <div>
-        <button onClick={toButton}>change me</button>
+        <Button variant="outlined" onClick={toButton}>change me</Button>
         <p>{text ? 'unchanged' : 'changed'}</p>
         </div>
         

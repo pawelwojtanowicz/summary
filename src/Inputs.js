@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from "react";
+import ReactDOM from 'react-dom';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function Inputs () {
     
@@ -12,6 +15,12 @@ function Inputs () {
     return (
     <div>
         
+        <TextField id="outlined-basic" label="Outlined" variant="outlined"
+        name="Input"
+        type="number"
+        value={someNumber}
+        onChange={(e) => setSomeNumber(e.target.value)}
+        />
         <input 
         name="Input"
         type="number"
@@ -20,13 +29,18 @@ function Inputs () {
         />
         <p>{someNumber}</p>
 
-        <input 
+      
+        <TextField
+        label="Text to change"
+        id="filled-size-normal"
+        defaultValue="Normal"
+        variant="filled"
         name="Input"
         type="text"
         value={someText}
         onChange={(e) => setSomeText(e.target.value)}
         />
-        <button onClick={() => setTextButton(someText)}>Click me!</button>
+        <Button variant="contained" size="small" onClick={() => setTextButton(someText)}>Click me to show text!</Button>
         <p>{textButton && <div>{textButton}</div>}</p>
 
 
